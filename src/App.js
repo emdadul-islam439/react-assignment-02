@@ -14,12 +14,12 @@ function App() {
   const showCharacterListHandler = (event) => {
     setCharacterList([...inputMessage]);
   };
-  function removeCharacterHandler(idx) {
+  const removeCharacterHandler = (idx) => {
     console.log("remove character---> idx: ", idx);
     const newCharList = [...characterList];
     const removedCharacter = newCharList.splice(idx, idx);
     setCharacterList(newCharList);
-  }
+  };
   return (
     <div className="App">
       <input type="textInput" onChange={changeInputHandler} />
