@@ -7,7 +7,8 @@ const charComponent = (props) => {
     border: "1px solid black",
   };
   return (
-    <div onClick={props.onClick(props.idx)} style={styles}>
+    // This answer saved a lot of my time: https://stackoverflow.com/a/64418665/14552446
+    <div onClick={() => props.onClick(props.idx)} style={styles}>
       {props.characterToShow}
     </div>
   );
