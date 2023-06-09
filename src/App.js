@@ -17,8 +17,10 @@ function App() {
   const removeCharacterHandler = (idx) => {
     console.log("remove character---> idx: ", idx);
     const newCharList = [...characterList];
-    const removedCharacter = newCharList.splice(idx, idx);
-    setCharacterList(newCharList);
+    // splice(<index-to-start-from>, <no-of-item-to-be-removed>, ...<item-list-to-be-added>);
+    // Link: https://www.w3schools.com/jsref/jsref_splice.asp
+    const removedCharacter = newCharList.splice(idx, 1);
+    setCharacterList([...newCharList]);
   };
   return (
     <div className="App">
